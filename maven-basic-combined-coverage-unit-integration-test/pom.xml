@@ -174,6 +174,20 @@
                     <!--<excludedGroups>com.mohsin.sonar.it</excludedGroups> used with @Category annotation-->
                 </configuration>
             </plugin>
+                 <profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://35.224.210.28:9000
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
