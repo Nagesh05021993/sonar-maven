@@ -13,7 +13,20 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>Sonar Basic Maven project with overall coverage ratio</name>
-
+   <profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://http://35.224.210.28:9000
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
